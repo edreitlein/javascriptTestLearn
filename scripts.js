@@ -49,12 +49,37 @@ function setTicTacArray(buttonNumber,buttonID){//takes the button number and ite
                 document.getElementById(buttonID).innerHTML = "O";
                 buttonArray[i]= 0;
                 xoro = 1;
+                checkForWin();
             }else{
                 document.getElementById(buttonID).innerHTML = "X";
                 buttonArray[i] = 1;
                 xoro = 0;
+                checkForWin();
             }
             console.log(buttonArray);
         } 
     }
+}
+
+function checkForWin(){//uses the buttonArray to check for a winner by comparing array elements for the same number stored ie [1,1,1,null,null,ect.] is considered a win
+    if(buttonArray[0] == 0 && buttonArray[1] == 0 && buttonArray[2]== 0){
+        alert("Winner");
+    }else if (buttonArray[3] == 0 && buttonArray[4] == 0 && buttonArray[5]== 0){
+        alert("Winner");
+    }else if (buttonArray[6] == 0 && buttonArray[7] == 0 && buttonArray[8]== 0){
+        alert("Winner");
+    }else if (buttonArray[0] == 0 && buttonArray[3] == 0 && buttonArray[6]== 0){
+        alert("Winner");
+    }else if (buttonArray[1] == 0 && buttonArray[4] == 0 && buttonArray[7]== 0){
+        alert("Winner");
+    }else if (buttonArray[2] == 0 && buttonArray[5] == 0 && buttonArray[8]== 0){
+        alert("Winner");
+    }else if (buttonArray[0] == 0 && buttonArray[4] == 0 && buttonArray[8]== 0){
+        alert("Winner");
+    }else if (buttonArray[2] == 0 && buttonArray[4] == 0 && buttonArray[6]== 0){
+        alert("Winner");
+    }
+
+    
+
 }
