@@ -32,19 +32,29 @@ function makeButtons(x,y){//takes 2 inputs and makes a grid of buttons x in heig
 
 }
 
-function ticTac(element){//Takes the element of the button clicked/sets the button clicked to an X or an O pending the value of xoro
-    if (xoro == 0){
-        element.innerHTML = "O";
-        xoro = 1;
-    }else{
-        element.innerHTML = "X";
-        xoro = 0;
-    }
-
-}
 
 //TODO check if a winner has been made with tictactoe - ideas is store values in an 2d array and check for wins
-function setTicTacArray(buttonID){//takes a buttonID and sets it corosponding array value to X or O for tic tac toe
 
-
+//i should comment this 
+function setTicTacArray(buttonNumber,buttonID){//takes the button number and iterates
+    let arrayIndex = buttonNumber; // for iterating through the array storing tictactoe and changing the array
+    //alert(buttonID);
+    let i;
+    for (i =0;i<=arrayIndex;i++){
+        
+        if (i == arrayIndex){
+            //alert(arrayIndex);
+            
+            if (xoro == 0){
+                document.getElementById(buttonID).innerHTML = "O";
+                buttonArray[i]= 0;
+                xoro = 1;
+            }else{
+                document.getElementById(buttonID).innerHTML = "X";
+                buttonArray[i] = 1;
+                xoro = 0;
+            }
+            console.log(buttonArray);
+        } 
+    }
 }
